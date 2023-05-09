@@ -100,6 +100,14 @@ void setup()
 #ifdef IO_LED_PIN
     pinMode(IO_LED_PIN, OUTPUT);
 #endif
+#ifdef VEXT_PIN_PWR
+    pinMode(VEXT_PIN_PWR, OUTPUT);
+    digitalWrite(VEXT_PIN_PWR, LOW);
+#endif
+#ifdef OLED_PIN_RST
+    pinMode(OLED_PIN_RST, OUTPUT);
+    digitalWrite(OLED_PIN_RST, HIGH);
+#endif
     sys.io_led_blink = 0;
 #ifdef PIN_BUTTON
     pinMode(PIN_BUTTON, INPUT);

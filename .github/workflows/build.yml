@@ -59,11 +59,7 @@ jobs:
         mkdir -p $OUTDIR
         mv .pio/build/${{ matrix.target }}/firmware.bin $OUTDIR >& /dev/null || :
         # copy the common ESP32 files
-        if [[ ${{matrix.target}} == *s3* ]] ; then
-          cp ~/.platformio/packages/framework-arduinoespressif32/tools/partitions/boot_app0.bin ~/artifacts/firmware/
-          mv .pio/build/${{ matrix.target }}/partitions.bin ~/artifacts/firmware/
-          mv .pio/build/${{ matrix.target }}/bootloader.bin ~/artifacts/firmware/bootloader_dio_80m.bin
-        elif [[ ${{matrix.target}} == *ESP32* ]] ; then
+        if [[ ${{matrix.target}} == *ESP32* ]] ; then
           cp ~/.platformio/packages/framework-arduinoespressif32/tools/partitions/boot_app0.bin ~/artifacts/firmware/
           mv .pio/build/${{ matrix.target }}/partitions.bin ~/artifacts/firmware/
           mv .pio/build/${{ matrix.target }}/bootloader.bin ~/artifacts/firmware/bootloader_dio_40m.bin
