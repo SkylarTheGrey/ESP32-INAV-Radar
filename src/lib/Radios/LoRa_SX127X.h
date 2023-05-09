@@ -5,8 +5,8 @@
 #ifdef LORA_FAMILY_SX127X
 #define FREQUENCY 915.0 // MHz
 #define BANDWIDTH 500 // kHz
-#define SPREADING_FACTOR 7 // SF6
-#define CODING_RATE 5 // 4/5 CR
+#define SPREADING_FACTOR 7 // SF6 6-12
+#define CODING_RATE 5 // 1-4 -> CR 4/5,4/6,4/7,4/8
 #define SYNC_WORD 0x17 // Arbitrarily chosen
 #define PREAMBLE_LENGTH 8 // symbols
 #define LNA_GAIN 0 // Automatic gain
